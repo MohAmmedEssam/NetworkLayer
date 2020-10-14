@@ -3,8 +3,8 @@ import Alamofire
 enum EndPoints: APIConfigurations {
     
     case apiWithParameters(parameters: [String:Any])
-        apiWithoutParameters,
-        apiWithQuery(pageNumber:Int)
+    case apiWithoutParameters
+    case apiWithQuery(pageNumber:Int)
 
     var method: HTTPMethod {
         switch self {
